@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">movilesAndroid</string>
+    <string name="password_string">Contraseña</string>
+    <string name="login_string">Iniciar sesión</string>
+</resources>
