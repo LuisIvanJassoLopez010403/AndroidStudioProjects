@@ -9,6 +9,8 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.movilesandroid.RockPaperScissor.RockPaperScissorScreen
+import com.example.movilesandroid.RockPaperScissor.RockPaperScissorViewModel
 import com.example.movilesandroid.Sum.SumScreen
 import com.example.movilesandroid.Sum.SumViewModel
 import com.example.movilesandroid.ui.theme.MovilesAndroidTheme
@@ -21,7 +23,8 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
                     //ExamenSegundoParcial(viewModel = SoccerScoreViewModel())
-                    SumScreen(viewModel = SumViewModel())
+                    //SumScreen(viewModel = SumViewModel())
+                    RockPaperScissorScreen(viewModel = RockPaperScissorViewModel())
                 }
             }
         }
@@ -33,6 +36,7 @@ class MainActivity : ComponentActivity() {
 fun GreetingPreview() {
     MovilesAndroidTheme {
         //ExamenSegundoParcial(viewModel = SoccerScoreViewModel())
-        SumScreen(viewModel = SumViewModel())
+        //SumScreen(viewModel = SumViewModel())
+        RockPaperScissorScreen(viewModel = RockPaperScissorViewModel())
     }
 }
