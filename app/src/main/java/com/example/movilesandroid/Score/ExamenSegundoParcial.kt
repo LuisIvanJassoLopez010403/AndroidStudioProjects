@@ -67,7 +67,7 @@ fun ExamenSegundoParcial(viewModel: SoccerScoreViewModel) {
                         Log.d("sumar", "local")
                         viewModel.incrementVisitScore(SoccerScoreVisitModel(visitScoreResult))
                     }
-            )
+            ) 
         }
     }
 }
