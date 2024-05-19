@@ -18,6 +18,8 @@ import com.example.movilesandroid.Screens.Gyms.Viewmodel.GymViewModel
 import com.example.movilesandroid.Screens.Gyms.Views.GymList
 import com.example.movilesandroid.Sum.SumScreen
 import com.example.movilesandroid.Sum.SumViewModel
+import com.example.movilesandroid.examenTercerParcial.WaterScreen
+import com.example.movilesandroid.examenTercerParcial.WaterViewModel
 import com.example.movilesandroid.ui.theme.MovilesAndroidTheme
 
 class MainActivity : ComponentActivity() {
@@ -31,7 +33,8 @@ class MainActivity : ComponentActivity() {
                     //SumScreen(viewModel = SumViewModel())
                     //RockPaperScissorScreen(viewModel = RockPaperScissorViewModel())
                     //BMIScreen(viewModel = BMIViewModel())
-                    GymList(viewModel = GymViewModel())
+                    //GymList(viewModel = GymViewModel())
+                    WaterScreen(viewModel = WaterViewModel())
                 }
             }
         }
@@ -46,6 +49,7 @@ fun GreetingPreview() {
         //SumScreen(viewModel = SumViewModel())
         //RockPaperScissorScreen(viewModel = RockPaperScissorViewModel())
         //BMIScreen(viewModel = BMIViewModel())
-        GymList(viewModel = GymViewModel())
+        //GymList(viewModel = GymViewModel())
+        WaterScreen(viewModel = WaterViewModel())
     }
 }
