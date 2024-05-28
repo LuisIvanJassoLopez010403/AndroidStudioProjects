@@ -16,6 +16,8 @@ import com.example.movilesandroid.RockPaperScissor.RockPaperScissorViewModel
 import com.example.movilesandroid.Screens.Gyms.Models.Gym
 import com.example.movilesandroid.Screens.Gyms.Viewmodel.GymViewModel
 import com.example.movilesandroid.Screens.Gyms.Views.GymList
+import com.example.movilesandroid.Screens.Restaurants.Viewmodel.RestaurantViewModel
+import com.example.movilesandroid.Screens.Restaurants.Views.RestaurantList
 import com.example.movilesandroid.Sum.SumScreen
 import com.example.movilesandroid.Sum.SumViewModel
 import com.example.movilesandroid.examenTercerParcial.WaterScreen
@@ -34,7 +36,8 @@ class MainActivity : ComponentActivity() {
                     //RockPaperScissorScreen(viewModel = RockPaperScissorViewModel())
                     //BMIScreen(viewModel = BMIViewModel())
                     //GymList(viewModel = GymViewModel())
-                    WaterScreen(viewModel = WaterViewModel())
+                    //WaterScreen(viewModel = WaterViewModel())
+                    RestaurantList(viewModel = RestaurantViewModel())
                 }
             }
         }
@@ -50,6 +53,7 @@ fun GreetingPreview() {
         //RockPaperScissorScreen(viewModel = RockPaperScissorViewModel())
         //BMIScreen(viewModel = BMIViewModel())
         //GymList(viewModel = GymViewModel())
-        WaterScreen(viewModel = WaterViewModel())
+        //WaterScreen(viewModel = WaterViewModel())
+        RestaurantList(viewModel = RestaurantViewModel())
     }
 }
