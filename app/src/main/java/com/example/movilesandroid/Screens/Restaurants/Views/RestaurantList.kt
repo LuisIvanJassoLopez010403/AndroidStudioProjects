@@ -1,10 +1,12 @@
 package com.example.movilesandroid.Screens.Restaurants.Views
 
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
@@ -23,6 +25,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import com.example.movilesandroid.R
@@ -44,6 +47,7 @@ fun RestaurantList(viewModel: RestaurantViewModel,navController: NavHostControll
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
                         .fillMaxWidth()
+                        .padding(vertical = 10.dp)
                         .aspectRatio(16f / 9f)
                         .clickable {
                             navController.navigate("detail/${restaurant.name}")
@@ -69,11 +73,13 @@ fun RestaurantList(viewModel: RestaurantViewModel,navController: NavHostControll
                     )
                 }
             }
-            Row {
-                Text(text = restaurant.name, fontWeight = FontWeight.Bold)
-                Text(text = "${restaurant.rating}")
+            Row (
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween) {
+                    Text(text = restaurant.name, fontWeight = FontWeight.Bold)
+                    Text(text = "${restaurant.rating}")
             }
-            Text(text = "MX ${restaurant.fee} Delivery fee:${restaurant.delivery}")
+            Text(text = "MX ${restaurant.fee} Delivery fee · ${restaurant.delivery}")
         }
     }
     DisposableEffect(Unit) {
