@@ -17,6 +17,7 @@ import com.example.movilesandroid.Screens.Gyms.Models.Gym
 import com.example.movilesandroid.Screens.Gyms.Viewmodel.GymViewModel
 import com.example.movilesandroid.Screens.Gyms.Views.GymList
 import com.example.movilesandroid.Screens.Restaurants.Viewmodel.RestaurantViewModel
+import com.example.movilesandroid.Screens.Restaurants.Views.Nav
 import com.example.movilesandroid.Screens.Restaurants.Views.RestaurantList
 import com.example.movilesandroid.Sum.SumScreen
 import com.example.movilesandroid.Sum.SumViewModel
@@ -37,7 +38,7 @@ class MainActivity : ComponentActivity() {
                     //BMIScreen(viewModel = BMIViewModel())
                     //GymList(viewModel = GymViewModel())
                     //WaterScreen(viewModel = WaterViewModel())
-                    RestaurantList(viewModel = RestaurantViewModel())
+                    Nav()
                 }
             }
         }
@@ -54,6 +55,6 @@ fun GreetingPreview() {
         //BMIScreen(viewModel = BMIViewModel())
         //GymList(viewModel = GymViewModel())
         //WaterScreen(viewModel = WaterViewModel())
-        RestaurantList(viewModel = RestaurantViewModel())
+        Nav()
     }
 }
