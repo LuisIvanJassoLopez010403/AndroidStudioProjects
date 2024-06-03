@@ -3,7 +3,7 @@ package com.example.movilesandroid.Screens.Restaurants.Views
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import androidx.browser.customtabs.CustomTabsIntent
+import android.util.Log
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -13,12 +13,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -36,6 +34,17 @@ fun RestaurantDetailView(viewModel: RestaurantViewModel, navController: NavContr
     val restaurants by viewModel.restaurants.collectAsState()
     val context = LocalContext.current
 
+    fun openWebsite(url: String?, context: Context) {
+        if (!url.isNullOrBlank()) {
+            val intent = Intent(Intent.ACTION_VIEW).apply {
+                data = Uri.parse(url)
+            }
+            context.startActivity(intent)
+        } else {
+            Log.e("OpenWebsite", "La URL es nula o vacía")
+        }
+    }
+
     // Asegúrate de que los datos se cargan solo una vez
     LaunchedEffect(Unit) {
         if (restaurants.isEmpty()) {
@@ -46,14 +55,19 @@ fun RestaurantDetailView(viewModel: RestaurantViewModel, navController: NavContr
         items(restaurants) { restaurant ->
             if (restaurant.name == item) {
                 Column {
-                    Row {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
                         Button(onClick = { navController.popBackStack() }) {
                             Text(text = "Back")
                         }
                         Text(
                             text = item,
                             fontWeight = FontWeight.Bold,
-                            modifier = Modifier.align(Alignment.CenterVertically)
+                            modifier = Modifier
+                                .align(Alignment.CenterVertically)
+                                .padding(5.dp)
                         )
                     }
                     AsyncImage(
@@ -83,7 +97,6 @@ fun RestaurantDetailView(viewModel: RestaurantViewModel, navController: NavContr
                             snippet = "Restaurant Location"
                         )
                     }
-                    // Botón para hacer la llamada
                     Spacer(modifier = Modifier.height(16.dp))
                     Button(
                         onClick = {
@@ -94,22 +107,18 @@ fun RestaurantDetailView(viewModel: RestaurantViewModel, navController: NavContr
                         },
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(16.dp)
+                            .padding(5.dp)
                     ) {
-                        Text(text = "Call Restaurant")
+                        Text(text = "Llamar")
                     }
-                    // Botón para visitar el sitio web
-
                     Spacer(modifier = Modifier.height(16.dp))
                     Button(
-                        onClick = {
-
-                        },
+                        onClick = { openWebsite(restaurant.webSite, context) },
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(16.dp)
+                            .padding(5.dp)
                     ) {
-                        Text(text = "Sitio Web")
+                        Text("Sitio Web")
                     }
                 }
             }
