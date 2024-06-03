@@ -45,7 +45,6 @@ fun RestaurantDetailView(viewModel: RestaurantViewModel, navController: NavContr
         }
     }
 
-    // Asegúrate de que los datos se cargan solo una vez
     LaunchedEffect(Unit) {
         if (restaurants.isEmpty()) {
             viewModel.getRestaurants()
