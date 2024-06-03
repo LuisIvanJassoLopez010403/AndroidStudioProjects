@@ -34,7 +34,6 @@ import com.google.maps.android.compose.rememberCameraPositionState
 @Composable
 fun RestaurantDetailView(viewModel: RestaurantViewModel, navController: NavController, item: String) {
     val restaurants by viewModel.restaurants.collectAsState()
-
     val context = LocalContext.current
 
     // Asegúrate de que los datos se cargan solo una vez
@@ -100,11 +99,11 @@ fun RestaurantDetailView(viewModel: RestaurantViewModel, navController: NavContr
                         Text(text = "Call Restaurant")
                     }
                     // Botón para visitar el sitio web
-                    val intent = remember {Intent(Intent.ACTION_VIEW, Uri.parse(restaurant.website))}
+
                     Spacer(modifier = Modifier.height(16.dp))
                     Button(
                         onClick = {
-                            context.startActivity(intent)
+
                         },
                         modifier = Modifier
                             .fillMaxWidth()
