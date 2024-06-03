@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
@@ -85,8 +86,18 @@ fun RestaurantList(viewModel: RestaurantViewModel,navController: NavHostControll
                     Text(text = restaurant.name, fontWeight = FontWeight.Bold)
                     Text(text = "${restaurant.rating}", modifier = Modifier.background(color = Color.LightGray))
             }
-            Text(text = "MX ${restaurant.fee} Delivery fee · ${restaurant.delivery}",
-                modifier = Modifier.padding(10.dp))
+            Row (
+                modifier = Modifier
+                    .padding(10.dp)
+            ) {
+                Icon(
+                    painter = painterResource(id = R.drawable.id_card),
+                    contentDescription = "Icon Description",
+                    tint = Color(0xFFD3A13C),
+                    modifier = Modifier.size(24.dp)
+                )
+                Text(text = " MX ${restaurant.fee} Delivery fee · ${restaurant.delivery}")
+            }
         }
     }
     DisposableEffect(Unit) {
