@@ -9,20 +9,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.movilesandroid.BMI.BMIScreen
-import com.example.movilesandroid.BMI.BMIViewModel
-import com.example.movilesandroid.RockPaperScissor.RockPaperScissorScreen
-import com.example.movilesandroid.RockPaperScissor.RockPaperScissorViewModel
-import com.example.movilesandroid.Screens.Gyms.Models.Gym
-import com.example.movilesandroid.Screens.Gyms.Viewmodel.GymViewModel
-import com.example.movilesandroid.Screens.Gyms.Views.GymList
-import com.example.movilesandroid.Screens.Restaurants.Viewmodel.RestaurantViewModel
 import com.example.movilesandroid.Screens.Restaurants.Views.Nav
-import com.example.movilesandroid.Screens.Restaurants.Views.RestaurantList
-import com.example.movilesandroid.Sum.SumScreen
-import com.example.movilesandroid.Sum.SumViewModel
-import com.example.movilesandroid.examenTercerParcial.WaterScreen
-import com.example.movilesandroid.examenTercerParcial.WaterViewModel
 import com.example.movilesandroid.ui.theme.MovilesAndroidTheme
 
 class MainActivity : ComponentActivity() {
@@ -30,15 +17,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MovilesAndroidTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-                    //ExamenSegundoParcial(viewModel = SoccerScoreViewModel())
-                    //SumScreen(viewModel = SumViewModel())
-                    //RockPaperScissorScreen(viewModel = RockPaperScissorViewModel())
-                    //BMIScreen(viewModel = BMIViewModel())
-                    //GymList(viewModel = GymViewModel())
-                    //WaterScreen(viewModel = WaterViewModel())
                     Nav()
+                    //OpenURL()
                 }
             }
         }
@@ -49,12 +30,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun GreetingPreview() {
     MovilesAndroidTheme {
-        //ExamenSegundoParcial(viewModel = SoccerScoreViewModel())
-        //SumScreen(viewModel = SumViewModel())
-        //RockPaperScissorScreen(viewModel = RockPaperScissorViewModel())
-        //BMIScreen(viewModel = BMIViewModel())
-        //GymList(viewModel = GymViewModel())
-        //WaterScreen(viewModel = WaterViewModel())
         Nav()
+        //OpenURL()
     }
 }

@@ -1,5 +1,6 @@
 package com.example.movilesandroid.Screens.Restaurants.Views
 
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.browser.customtabs.CustomTabsIntent
@@ -12,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
@@ -32,9 +34,8 @@ import com.google.maps.android.compose.rememberCameraPositionState
 @Composable
 fun RestaurantDetailView(viewModel: RestaurantViewModel, navController: NavController, item: String) {
     val restaurants by viewModel.restaurants.collectAsState()
-    val context = LocalContext.current
 
-    val uriHandler = LocalUriHandler.current
+    val context = LocalContext.current
 
     // Asegúrate de que los datos se cargan solo una vez
     LaunchedEffect(Unit) {
@@ -99,12 +100,11 @@ fun RestaurantDetailView(viewModel: RestaurantViewModel, navController: NavContr
                         Text(text = "Call Restaurant")
                     }
                     // Botón para visitar el sitio web
+                    val intent = remember {Intent(Intent.ACTION_VIEW, Uri.parse(restaurant.website))}
                     Spacer(modifier = Modifier.height(16.dp))
                     Button(
                         onClick = {
-
-                            uriHandler.openUri(uri = restaurant.website)
-
+                            context.startActivity(intent)
                         },
                         modifier = Modifier
                             .fillMaxWidth()
