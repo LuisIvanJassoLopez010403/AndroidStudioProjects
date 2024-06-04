@@ -83,7 +83,6 @@ fun RestaurantDetailView(viewModel: RestaurantViewModel, navController: NavContr
                     val cameraPositionState = rememberCameraPositionState {
                         position = com.google.android.gms.maps.model.CameraPosition.fromLatLngZoom(latLng, 15f)
                     }
-
                     GoogleMap(
                         modifier = Modifier
                             .fillMaxWidth()
