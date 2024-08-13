@@ -9,7 +9,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.movilesandroid.Screens.Restaurants.Views.Nav
+import com.example.movilesandroid.CookBook.MainScreen
 import com.example.movilesandroid.ui.theme.MovilesAndroidTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,8 +18,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             MovilesAndroidTheme {
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-                    Nav()
-                    //OpenURL()
+                    MainScreen()
+                    //Nav()
                 }
             }
         }
@@ -30,7 +30,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun GreetingPreview() {
     MovilesAndroidTheme {
-        Nav()
-        //OpenURL()
+        MainScreen()
     }
 }
