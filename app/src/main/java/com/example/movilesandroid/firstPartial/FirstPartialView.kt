@@ -37,19 +37,9 @@ fun FirstPartialView(navController: NavController) {
             Text(text = "Go to BMI View")
         }
         Button(onClick = {
-            navController.navigate(Routes.loginView)
-        }) {
-            Text(text = "Go to Login View")
-        }
-        Button(onClick = {
-            navController.navigate(Routes.buttonListView)
-        }) {
-            Text(text = "Go to ButtonList View")
-        }
-        Button(onClick = {
             navController.navigate(Routes.studentListView)
         }) {
-            Text(text = "Go to StudentList View")
+            Text(text = "Go to Student List View")
         }
     }
 }

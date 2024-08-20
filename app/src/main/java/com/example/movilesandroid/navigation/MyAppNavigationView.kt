@@ -41,12 +41,6 @@ fun MyAppNavigationView() {
         composable(Routes.bmiView) {
             BMIView(viewModel = BMIViewModel(),navController)
         }
-        composable(Routes.loginView) {
-            LoginView(navController)
-        }
-        composable(Routes.buttonListView) {
-            ButtonListView(navController)
-        }
         composable(Routes.studentListView) {
             StudentListView(navController)
         }
