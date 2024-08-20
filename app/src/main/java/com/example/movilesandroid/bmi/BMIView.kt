@@ -1,4 +1,4 @@
-package com.example.movilesandroid.BMI
+package com.example.movilesandroid.bmi
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -18,11 +18,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.example.movilesandroid.R
 import com.example.movilesandroid.ui.theme.MovilesAndroidTheme
 
 @Composable
-fun BMIScreen(viewModel: BMIViewModel){
+fun BMIView(viewModel: BMIViewModel,navController: NavController){
     var weight by remember { mutableStateOf("") }
     var height by remember { mutableStateOf("") }
 
@@ -53,6 +55,6 @@ fun BMIScreen(viewModel: BMIViewModel){
 @Composable
 fun BMIPreview() {
     MovilesAndroidTheme {
-        BMIScreen(viewModel = BMIViewModel())
+        BMIView(viewModel = BMIViewModel(), navController = rememberNavController())
     }
 }

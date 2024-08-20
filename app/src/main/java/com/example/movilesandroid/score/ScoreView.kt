@@ -1,4 +1,4 @@
-package com.example.movilesandroid.Score
+package com.example.movilesandroid.score
 
 import android.util.Log
 import androidx.compose.foundation.Image
@@ -19,11 +19,13 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.example.movilesandroid.R
 import com.example.movilesandroid.ui.theme.MovilesAndroidTheme
 
 @Composable
-fun ExamenSegundoParcial(viewModel: SoccerScoreViewModel) {
+fun ScoreView(viewModel: SoccerScoreViewModel,navController: NavController) {
     val localScoreResult by viewModel.getLocalScore().observeAsState(0)
     val visitScoreResult by viewModel.getVisitScore().observeAsState(0)
 
@@ -74,8 +76,8 @@ fun ExamenSegundoParcial(viewModel: SoccerScoreViewModel) {
 
 @Preview(showBackground = true)
 @Composable
-fun ExamenSegundoParcialPreview() {
+fun ScoreView() {
     MovilesAndroidTheme {
-        ExamenSegundoParcial(viewModel = SoccerScoreViewModel())
+        ScoreView(viewModel = SoccerScoreViewModel(), navController = rememberNavController())
     }
 }

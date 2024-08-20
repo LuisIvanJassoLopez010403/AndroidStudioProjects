@@ -1,4 +1,4 @@
-package com.example.movilesandroid.Score
+package com.example.movilesandroid.score
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

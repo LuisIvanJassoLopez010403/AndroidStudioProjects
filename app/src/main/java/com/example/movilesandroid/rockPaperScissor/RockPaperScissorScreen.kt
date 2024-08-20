@@ -1,4 +1,4 @@
-package com.example.movilesandroid.RockPaperScissor
+package com.example.movilesandroid.rockPaperScissor
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
@@ -14,11 +14,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.example.movilesandroid.R
 import com.example.movilesandroid.ui.theme.MovilesAndroidTheme
 
 @Composable
-fun RockPaperScissorScreen(viewModel: RockPaperScissorViewModel) {
+fun RockPaperScissorScreen(viewModel: RockPaperScissorViewModel,navController: NavController) {
     var randomImage by remember { mutableStateOf(R.drawable.reveal) }
     Column(
         modifier = Modifier.padding(16.dp)
@@ -38,6 +40,6 @@ fun RockPaperScissorScreen(viewModel: RockPaperScissorViewModel) {
 @Composable
 fun RockPaperScissorPreview() {
     MovilesAndroidTheme {
-        RockPaperScissorScreen(viewModel = RockPaperScissorViewModel())
+        RockPaperScissorScreen(viewModel = RockPaperScissorViewModel(), navController = rememberNavController())
     }
 }

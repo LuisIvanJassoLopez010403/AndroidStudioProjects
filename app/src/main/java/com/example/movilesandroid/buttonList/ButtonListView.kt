@@ -1,4 +1,4 @@
-package com.example.movilesandroid
+package com.example.movilesandroid.buttonList
 
 import android.util.Log
 import android.widget.Toast
@@ -16,10 +16,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.example.movilesandroid.ui.theme.MovilesAndroidTheme
 
 @Composable
-fun ButtonListView(){
+fun ButtonListView(navController: NavController){
     Column(
         modifier = Modifier
             .verticalScroll(rememberScrollState())
@@ -97,6 +99,6 @@ fun ButtonListView(){
 @Composable
 fun ButtonListPreview() {
     MovilesAndroidTheme {
-        ButtonListView()
+        ButtonListView(navController = rememberNavController())
     }
 }

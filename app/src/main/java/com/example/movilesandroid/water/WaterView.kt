@@ -1,4 +1,4 @@
-package com.example.movilesandroid.examenTercerParcial
+package com.example.movilesandroid.water
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -17,10 +17,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.movilesandroid.R
 
 @Composable
-fun WaterScreen(viewModel: WaterViewModel) {
+fun WaterView(viewModel: WaterViewModel,navController: NavController) {
 
     val total by viewModel.getCurrentWaterAmount().observeAsState(0.0)
 

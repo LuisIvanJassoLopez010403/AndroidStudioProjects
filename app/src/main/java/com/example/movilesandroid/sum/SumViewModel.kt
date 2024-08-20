@@ -1,4 +1,4 @@
-package com.example.movilesandroid.Sum
+package com.example.movilesandroid.sum
 
 import android.util.Log
 import androidx.lifecycle.LiveData

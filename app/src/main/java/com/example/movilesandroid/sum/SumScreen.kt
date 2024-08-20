@@ -1,4 +1,4 @@
-package com.example.movilesandroid.Sum
+package com.example.movilesandroid.sum
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
@@ -15,10 +15,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.example.movilesandroid.ui.theme.MovilesAndroidTheme
 
 @Composable
-fun SumScreen(viewModel: SumViewModel) {
+fun SumScreen(viewModel: SumViewModel,navController: NavController) {
     var number1 by remember { mutableStateOf("") }
     var number2 by remember { mutableStateOf("") }
     var number3 by remember { mutableStateOf("") }
@@ -50,6 +52,6 @@ fun SumScreen(viewModel: SumViewModel) {
 @Composable
 fun SumaPreview() {
     MovilesAndroidTheme {
-        SumScreen(viewModel = SumViewModel())
+        SumScreen(viewModel = SumViewModel(), navController = rememberNavController())
     }
 }

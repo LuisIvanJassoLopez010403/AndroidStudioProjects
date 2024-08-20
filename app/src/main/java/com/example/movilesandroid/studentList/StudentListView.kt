@@ -1,4 +1,4 @@
-package com.example.movilesandroid
+package com.example.movilesandroid.studentList
 
 import android.util.Log
 import android.widget.Toast
@@ -13,10 +13,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
+import com.example.movilesandroid.R
 import com.example.movilesandroid.ui.theme.MovilesAndroidTheme
 
 @Composable
-fun ExamenPrimerParcial() {
+fun StudentListView(navController: NavController) {
     Column {
         val context = LocalContext.current
         Image(painter = painterResource(id = R.drawable.logo), contentDescription = "imagen de logo")
@@ -39,8 +42,8 @@ fun ExamenPrimerParcial() {
 
 @Preview(showBackground = true)
 @Composable
-fun ExamenPrimerParcialPreview() {
+fun StudentListPreview() {
     MovilesAndroidTheme {
-        ExamenPrimerParcial()
+        StudentListView(navController = rememberNavController())
     }
 }

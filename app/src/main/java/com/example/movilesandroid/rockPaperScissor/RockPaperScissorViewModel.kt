@@ -1,4 +1,4 @@
-package com.example.movilesandroid.RockPaperScissor
+package com.example.movilesandroid.rockPaperScissor
 
 import androidx.lifecycle.ViewModel
 import com.example.movilesandroid.R

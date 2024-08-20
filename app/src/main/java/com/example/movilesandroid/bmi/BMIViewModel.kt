@@ -1,4 +1,4 @@
-package com.example.movilesandroid.BMI
+package com.example.movilesandroid.bmi
 
 import android.util.Log
 import androidx.lifecycle.LiveData
