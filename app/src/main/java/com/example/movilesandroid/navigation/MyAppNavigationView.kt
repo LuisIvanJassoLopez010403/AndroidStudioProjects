@@ -44,5 +44,11 @@ fun MyAppNavigationView() {
         composable(Routes.studentListView) {
             StudentListView(navController)
         }
+        composable(Routes.buttonListView) {
+            ButtonListView(navController)
+        }
+        composable(Routes.loginView) {
+            LoginView(navController)
+        }
     })
 }
