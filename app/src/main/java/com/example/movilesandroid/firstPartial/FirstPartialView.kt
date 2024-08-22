@@ -28,7 +28,7 @@ fun FirstPartialView(navController: NavController) {
             TopAppBar(
                 title = { Text("First Partial", color = Color.White) },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = Color.Black,
+                    containerColor = Color.Red,
                 )
             )
         },

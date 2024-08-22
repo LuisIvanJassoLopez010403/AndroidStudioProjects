@@ -28,7 +28,7 @@ fun ThirdPartialView(navController: NavController) {
             TopAppBar(
                 title = { Text("Third Partial", color = Color.White) },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = Color.Black,
+                    containerColor = Color.Red,
                 )
             )
         },
