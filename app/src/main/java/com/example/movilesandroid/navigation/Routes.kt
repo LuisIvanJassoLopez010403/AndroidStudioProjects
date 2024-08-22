@@ -2,6 +2,8 @@ package com.example.movilesandroid.navigation
 
 object Routes {
     var firstPartialView = "FirstPartialView"
+    var secondPartialView = "SecondPartialView"
+    var thirdPartialView = "ThirdPartialView"
     var sumView = "SumView"
     var rockPaperScissorView = "RockPaperScissorView"
     var scoreView = "ScoreView"

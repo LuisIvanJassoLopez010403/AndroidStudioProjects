@@ -17,7 +17,9 @@ import com.example.movilesandroid.water.WaterView
 import com.example.movilesandroid.water.WaterViewModel
 import com.example.movilesandroid.firstPartial.FirstPartialView
 import com.example.movilesandroid.login.LoginView
+import com.example.movilesandroid.secondPartial.SecondPartialView
 import com.example.movilesandroid.studentList.StudentListView
+import com.example.movilesandroid.thirdPartial.ThirdPartialView
 
 @Composable
 fun MyAppNavigationView() {
@@ -25,6 +27,12 @@ fun MyAppNavigationView() {
     NavHost(navController = navController, startDestination = Routes.firstPartialView, builder =  {
         composable(Routes.firstPartialView) {
             FirstPartialView(navController)
+        }
+        composable(Routes.secondPartialView) {
+            SecondPartialView(navController)
+        }
+        composable(Routes.thirdPartialView) {
+            ThirdPartialView(navController)
         }
         composable(Routes.sumView) {
             SumScreen(viewModel = SumViewModel(),navController)

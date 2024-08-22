@@ -19,8 +19,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MovilesAndroidTheme {
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-                    //MyAppNavigationView()
-                    FoodSelectionScreen()
+                    MyAppNavigationView()
                 }
             }
         }
@@ -30,6 +29,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun GreetingPreview() {
     MovilesAndroidTheme {
-        //MyAppNavigationView()
+        MyAppNavigationView()
     }
 }

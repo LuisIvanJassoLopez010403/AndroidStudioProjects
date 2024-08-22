@@ -1,4 +1,4 @@
-package com.example.movilesandroid.firstPartial
+package com.example.movilesandroid.secondPartial
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -22,11 +22,11 @@ import com.example.movilesandroid.navigation.Routes
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun FirstPartialView(navController: NavController) {
+fun SecondPartialView(navController: NavController) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("First Partial", color = Color.White) },
+                title = { Text("Second Partial", color = Color.White) },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
                     containerColor = Color.Black,
                 )
@@ -39,8 +39,8 @@ fun FirstPartialView(navController: NavController) {
                     .padding(innerPadding)
             ) {
                 Text(
-                    text = "First Partial View",
-                    fontSize = 50.sp,
+                    text = "Second Partial View",
+                    fontSize = 40.sp,
                     fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Center
                 )
