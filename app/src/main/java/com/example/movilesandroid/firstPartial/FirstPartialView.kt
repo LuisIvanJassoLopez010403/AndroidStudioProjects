@@ -104,6 +104,13 @@ fun FirstPartialView(navController: NavController) {
                         modifier = Modifier
                             .fillMaxWidth())
                 }
+                Button(onClick = {
+                    navController.navigate(Routes.timeFighterView)
+                }) {
+                    Text(text = "Go to TimeFighter View",
+                        modifier = Modifier
+                            .fillMaxWidth())
+                }
             }
         },
         bottomBar = {

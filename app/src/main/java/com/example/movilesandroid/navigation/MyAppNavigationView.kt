@@ -20,6 +20,8 @@ import com.example.movilesandroid.login.LoginView
 import com.example.movilesandroid.secondPartial.SecondPartialView
 import com.example.movilesandroid.studentList.StudentListView
 import com.example.movilesandroid.thirdPartial.ThirdPartialView
+import com.example.movilesandroid.timeFighter.TimeFighterView
+import com.example.movilesandroid.timeFighter.TimeFighterViewModel
 
 @Composable
 fun MyAppNavigationView() {
@@ -57,6 +59,9 @@ fun MyAppNavigationView() {
         }
         composable(Routes.loginView) {
             LoginView(navController)
+        }
+        composable(Routes.timeFighterView) {
+            TimeFighterView(viewModel = TimeFighterViewModel(), navController)
         }
     })
 }
