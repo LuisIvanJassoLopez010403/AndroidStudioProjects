@@ -12,4 +12,5 @@ object Routes {
     var loginView = "LoginView"
     var buttonListView = "ButtonListView"
     var studentListView = "StudentListView"
+    var timeFighterView = "TimeFighterView"
 }
