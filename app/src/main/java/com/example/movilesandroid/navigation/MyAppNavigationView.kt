@@ -17,6 +17,7 @@ import com.example.movilesandroid.water.WaterView
 import com.example.movilesandroid.water.WaterViewModel
 import com.example.movilesandroid.firstPartial.FirstPartialView
 import com.example.movilesandroid.login.LoginView
+import com.example.movilesandroid.lottie.LottieAnimationView
 import com.example.movilesandroid.secondPartial.SecondPartialView
 import com.example.movilesandroid.studentList.StudentListView
 import com.example.movilesandroid.thirdPartial.ThirdPartialView
@@ -62,6 +63,9 @@ fun MyAppNavigationView() {
         }
         composable(Routes.timeFighterView) {
             TimeFighterView(viewModel = TimeFighterViewModel(), navController)
+        }
+        composable(Routes.lottieAnimationView) {
+            LottieAnimationView(navController)
         }
     })
 }

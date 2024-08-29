@@ -111,6 +111,13 @@ fun FirstPartialView(navController: NavController) {
                         modifier = Modifier
                             .fillMaxWidth())
                 }
+                Button(onClick = {
+                    navController.navigate(Routes.lottieAnimationView)
+                }) {
+                    Text(text = "Go to Lottie Animation View",
+                        modifier = Modifier
+                            .fillMaxWidth())
+                }
             }
         },
         bottomBar = {
