@@ -75,4 +75,5 @@ dependencies {
     implementation("com.google.accompanist:accompanist-permissions:0.28.0")
     implementation("androidx.browser:browser:1.4.0")
     implementation("androidx.media:media:1.6.0")
+    implementation("com.airbnb.android:lottie-compose:4.0.0")
 }
