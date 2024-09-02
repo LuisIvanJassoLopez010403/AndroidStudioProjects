@@ -1,5 +1,6 @@
 package com.example.movilesandroid.navigation
 
+//Rutas de navegacion
 object Routes {
     var firstPartialView = "FirstPartialView"
     var secondPartialView = "SecondPartialView"
