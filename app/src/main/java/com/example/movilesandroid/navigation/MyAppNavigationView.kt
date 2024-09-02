@@ -23,6 +23,7 @@ import com.example.movilesandroid.studentList.StudentListView
 import com.example.movilesandroid.thirdPartial.ThirdPartialView
 import com.example.movilesandroid.timeFighter.TimeFighterView
 import com.example.movilesandroid.timeFighter.TimeFighterViewModel
+import com.example.movilesandroid.videoBackground.VideoBackgroundView
 
 @Composable
 fun MyAppNavigationView() {
@@ -66,6 +67,9 @@ fun MyAppNavigationView() {
         }
         composable(Routes.lottieAnimationView) {
             LottieAnimationView(navController)
+        }
+        composable(Routes.videoBackgroundView) {
+            VideoBackgroundView(navController)
         }
     })
 }
