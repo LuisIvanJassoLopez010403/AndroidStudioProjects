@@ -15,4 +15,5 @@ object Routes {
     var studentListView = "StudentListView"
     var timeFighterView = "TimeFighterView"
     var lottieAnimationView = "LottieAnimationView"
+    var videoBackgroundView = "VideoBackgroundView"
 }
