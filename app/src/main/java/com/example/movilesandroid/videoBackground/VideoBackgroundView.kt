@@ -1,13 +1,7 @@
 package com.example.movilesandroid.videoBackground
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
@@ -17,7 +11,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.navigation.NavController
@@ -31,7 +27,7 @@ import com.google.android.exoplayer2.upstream.RawResourceDataSource
 @Composable
 fun VideoBackgroundView(navController: NavController) {
     val context = LocalContext.current
-    val videoUri = RawResourceDataSource.buildRawResourceUri(R.raw.videospotifylogin)
+    val videoUri = RawResourceDataSource.buildRawResourceUri(com.example.movilesandroid.R.raw.videospotifylogin)
     val mediaItem = MediaItem.Builder()
         .setUri(videoUri)
         .build()
@@ -46,30 +42,42 @@ fun VideoBackgroundView(navController: NavController) {
                 exoPlayer.repeatMode = REPEAT_MODE_ALL
             }
     }
-
-    Box(modifier = Modifier
-        .fillMaxSize(),
-        contentAlignment = Alignment.BottomCenter
-    ) {
-        DisposableEffect(
-            AndroidView(factory = {
+    DisposableEffect(
+        AndroidView(
+            factory = {
                 StyledPlayerView(context).apply {
                     player = exoPlayer
                     useController = false
                 }
             },
-                modifier = Modifier
-                    .fillMaxSize()
-            )
-        ) {
-            onDispose { exoPlayer.release() }
-        }
+            modifier = Modifier.fillMaxSize()
+        )
+    ) {
+        onDispose { exoPlayer.release() }
+    }
+
+    Box(
+        modifier = Modifier.padding(0.dp,70.dp,0.dp,0.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        Image(
+            painter = painterResource(id = R.drawable.spotify),
+            contentDescription = "spotify image",
+            modifier = Modifier.size(300.dp)
+                .align (Alignment.TopCenter)
+        )
+    }
+
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(0.dp,0.dp,0.dp,60.dp),
+        contentAlignment = Alignment.BottomCenter
+    ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(0.dp,30.dp)
                 .height(60.dp),
-
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Button(
@@ -77,6 +85,7 @@ fun VideoBackgroundView(navController: NavController) {
                 modifier = Modifier
                     .weight(1f)
                     .fillMaxHeight(),
+                shape = RectangleShape,
                 colors = ButtonDefaults.buttonColors(containerColor = Color.Gray)
             ) {
                 Text(text = "LOG IN", color = Color.White)
@@ -86,6 +95,7 @@ fun VideoBackgroundView(navController: NavController) {
                 modifier = Modifier
                     .weight(1f)
                     .fillMaxHeight(),
+                shape = RectangleShape,
                 colors = ButtonDefaults.buttonColors(containerColor = Color.Green)
             ) {
                 Text(text = "SIGN UP", color = Color.White)
