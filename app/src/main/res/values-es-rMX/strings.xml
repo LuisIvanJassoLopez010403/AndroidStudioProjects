@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">movilesAndroid</string>
+    <string name="first_partial_title">Primer Parcial</string>
+    <string name="first_partial_screen_title">Primer Parcial</string>
+    <string name="sum_button">Ve a Vista de Suma</string>
+    <string name="rockPaperScissor_button">Ve a Vista de PiedraPapelTijera</string>
+    <string name="score_button">Ve a Vista de Puntaje</string>
+    <string name="water_button">Ve a Vista de Agua</string>
+    <string name="bmi_button">Ve a Vista de IMC</string>
+    <string name="studentList_button">Ve a Vista de ListaDeEstudiantes</string>
+    <string name="buttonList_button">Ve a Vista de ListaDeBotones</string>
+    <string name="login_button">Ve a Vista de Login</string>
+    <string name="timeFighter_button">Ve a Vista de PeleaDeTiempo</string>
+    <string name="lottieAnimation_button">Ve a Vista de Animación de Lottie</string>
+    <string name="videoBackground_button">Ve a Vista de Fondo de Video</string>
     <string name="password_string">Contraseña</string>
     <string name="login_string">Iniciar sesión</string>
 </resources>

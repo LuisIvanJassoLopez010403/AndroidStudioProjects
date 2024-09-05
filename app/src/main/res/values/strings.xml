@@ -1,5 +1,18 @@
 <resources>
     <string name="app_name">movilesAndroid</string>
+    <string name="first_partial_title">First Partial</string>
+    <string name="first_partial_screen_title">First Partial</string>
+    <string name="sum_button">Go to Sum View</string>
+    <string name="rockPaperScissor_button">Go to RockPaperScissor View</string>
+    <string name="score_button">Go to Score View</string>
+    <string name="water_button">Go to Water View</string>
+    <string name="bmi_button">Go to BMI View</string>
+    <string name="studentList_button">Go to StudentList View</string>
+    <string name="buttonList_button">Go to ButtonList View</string>
+    <string name="login_button">Go to Login View</string>
+    <string name="timeFighter_button">Go to TimeFighter View</string>
+    <string name="lottieAnimation_button">Go to Lottie Animation View</string>
+    <string name="videoBackground_button">Go to Video Background View</string>
     <string name="password_string">Password</string>
     <string name="login_string">Login</string>
 </resources>
