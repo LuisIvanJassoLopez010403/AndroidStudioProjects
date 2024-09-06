@@ -16,6 +16,8 @@ import com.example.movilesandroid.sum.SumViewModel
 import com.example.movilesandroid.water.WaterView
 import com.example.movilesandroid.water.WaterViewModel
 import com.example.movilesandroid.firstPartial.FirstPartialView
+import com.example.movilesandroid.firstPartialExam.FirstPartialExamView
+import com.example.movilesandroid.firstPartialExam.FirstPartialExamViewModel
 import com.example.movilesandroid.login.LoginView
 import com.example.movilesandroid.lottie.LottieAnimationView
 import com.example.movilesandroid.secondPartial.SecondPartialView
@@ -70,6 +72,9 @@ fun MyAppNavigationView() {
         }
         composable(Routes.videoBackgroundView) {
             VideoBackgroundView(navController)
+        }
+        composable(Routes.firstPartialExamView) {
+            FirstPartialExamView(viewModel = FirstPartialExamViewModel(), navController)
         }
     })
 }

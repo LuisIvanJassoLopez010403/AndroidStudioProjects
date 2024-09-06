@@ -16,4 +16,5 @@ object Routes {
     var timeFighterView = "TimeFighterView"
     var lottieAnimationView = "LottieAnimationView"
     var videoBackgroundView = "VideoBackgroundView"
+    var firstPartialExamView = "FirstPartialExamView"
 }

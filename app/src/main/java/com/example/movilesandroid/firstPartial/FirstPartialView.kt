@@ -134,6 +134,14 @@ fun FirstPartialView(navController: NavController) {
                         modifier = Modifier
                             .fillMaxWidth())
                 }
+                Button(onClick = {
+                    navController.navigate(Routes.firstPartialExamView)
+                }) {
+                    Text(
+                        (stringResource(id = R.string.videoBackground_button)),
+                        modifier = Modifier
+                            .fillMaxWidth())
+                }
             }
         },
         bottomBar = {
