@@ -95,18 +95,18 @@ fun FirstPartialView(navController: NavController) {
                             .fillMaxWidth())
                 }
                 Button(onClick = {
-                    navController.navigate(Routes.buttonListView)
+                    navController.navigate(Routes.gymListView)
                 }) {
                     Text(
-                        (stringResource(id = R.string.buttonList_button)),
+                        (stringResource(id = R.string.gymList_button)),
                         modifier = Modifier
                             .fillMaxWidth())
                 }
                 Button(onClick = {
-                    navController.navigate(Routes.loginView)
+                    navController.navigate(Routes.restaurantListView)
                 }) {
                     Text(
-                        (stringResource(id = R.string.login_button)),
+                        (stringResource(id = R.string.restaurantList_button)),
                         modifier = Modifier
                             .fillMaxWidth())
                 }
@@ -134,6 +134,7 @@ fun FirstPartialView(navController: NavController) {
                         modifier = Modifier
                             .fillMaxWidth())
                 }
+
                 Button(onClick = {
                     navController.navigate(Routes.firstPartialExamView)
                 }) {

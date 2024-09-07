@@ -1,4 +1,4 @@
-package com.example.movilesandroid.Screens.Gyms.Models
+package com.example.movilesandroid.gyms.Models
 
 data class Gym(
     val name: String,

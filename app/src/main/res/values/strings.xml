@@ -13,6 +13,8 @@
     <string name="timeFighter_button">Go to TimeFighter View</string>
     <string name="lottieAnimation_button">Go to Lottie Animation View</string>
     <string name="videoBackground_button">Go to Video Background View</string>
+    <string name="gymList_button">Go to GymList View</string>
+    <string name="restaurantList_button">Go to RestaurantList View</string>
     <string name="firstPartialTest_button">Go to First Partial Test View</string>
     <string name="totalProduction_string">Total Production</string>
     <string name="currentProduction_string">Current Production</string>

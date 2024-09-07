@@ -1,4 +1,4 @@
-package com.example.movilesandroid.Screens.Restaurants.Views
+package com.example.movilesandroid.restaurants.Views
 
 import android.content.Context
 import android.content.Intent
@@ -23,7 +23,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.example.movilesandroid.R
-import com.example.movilesandroid.Screens.Restaurants.Viewmodel.RestaurantViewModel
+import com.example.movilesandroid.restaurants.Viewmodel.RestaurantViewModel
 import com.google.android.gms.maps.model.LatLng
 import com.google.maps.android.compose.GoogleMap
 import com.google.maps.android.compose.Marker

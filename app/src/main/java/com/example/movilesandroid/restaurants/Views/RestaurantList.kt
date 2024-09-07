@@ -1,10 +1,9 @@
-package com.example.movilesandroid.Screens.Restaurants.Views
+package com.example.movilesandroid.restaurants.Views
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -29,15 +28,14 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import com.example.movilesandroid.R
-import com.example.movilesandroid.Screens.Restaurants.Viewmodel.RestaurantViewModel
+import com.example.movilesandroid.restaurants.Viewmodel.RestaurantViewModel
 
 @Composable
-fun RestaurantList(viewModel: RestaurantViewModel,navController: NavHostController) {
+fun RestaurantList(viewModel: RestaurantViewModel, navController: NavHostController) {
     val restaurants by viewModel.restaurants.collectAsState()
 
     LazyColumn (modifier = Modifier.fillMaxWidth()) {

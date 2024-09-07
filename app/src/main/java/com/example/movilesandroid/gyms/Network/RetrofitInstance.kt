@@ -1,8 +1,7 @@
-package com.example.movilesandroid.Screens.Gyms.Network
+package com.example.movilesandroid.gyms.Network
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 
 object RetrofitInstance {
     private

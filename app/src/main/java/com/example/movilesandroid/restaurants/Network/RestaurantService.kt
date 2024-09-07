@@ -1,6 +1,6 @@
-package com.example.movilesandroid.Screens.Restaurants.Network
+package com.example.movilesandroid.restaurants.Network
 
-import com.example.movilesandroid.Screens.Restaurants.Models.Restaurant
+import com.example.movilesandroid.restaurants.Models.Restaurant
 import retrofit2.http.GET
 
 interface RestaurantService {

@@ -1,10 +1,8 @@
-package com.example.movilesandroid.Screens.Gyms.Views
+package com.example.movilesandroid.gyms.Views
 
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
@@ -13,12 +11,13 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.example.movilesandroid.R
-import com.example.movilesandroid.Screens.Gyms.Viewmodel.GymViewModel
+import com.example.movilesandroid.gyms.Viewmodel.GymViewModel
 
 @Composable
-fun GymList(viewModel: GymViewModel) {
+fun GymList(viewModel: GymViewModel, navController: NavController) {
     val gyms by viewModel.gyms.collectAsState()
     LazyColumn{
         items(gyms) {

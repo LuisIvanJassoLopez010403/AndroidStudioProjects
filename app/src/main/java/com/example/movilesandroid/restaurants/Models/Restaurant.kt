@@ -1,4 +1,4 @@
-package com.example.movilesandroid.Screens.Restaurants.Models
+package com.example.movilesandroid.restaurants.Models
 
 data class Restaurant (
     val name: String,

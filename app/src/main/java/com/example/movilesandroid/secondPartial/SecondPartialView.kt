@@ -90,20 +90,6 @@ fun SecondPartialView(navController: NavController) {
                         modifier = Modifier
                             .fillMaxWidth())
                 }
-                Button(onClick = {
-                    navController.navigate(Routes.buttonListView)
-                }) {
-                    Text(text = "Go to Button List View",
-                        modifier = Modifier
-                            .fillMaxWidth())
-                }
-                Button(onClick = {
-                    navController.navigate(Routes.loginView)
-                }) {
-                    Text(text = "Go to Login View",
-                        modifier = Modifier
-                            .fillMaxWidth())
-                }
             }
         },
         bottomBar = {

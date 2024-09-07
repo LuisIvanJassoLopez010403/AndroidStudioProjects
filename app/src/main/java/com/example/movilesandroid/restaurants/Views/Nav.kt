@@ -1,15 +1,15 @@
-package com.example.movilesandroid.Screens.Restaurants.Views
+package com.example.movilesandroid.restaurants.Views
 
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.movilesandroid.Screens.Restaurants.Viewmodel.RestaurantViewModel
+import com.example.movilesandroid.restaurants.Viewmodel.RestaurantViewModel
 
 @Composable
-fun Nav() {
+fun Nav(navControllerMain: NavController) {
     val navController = rememberNavController()
     val restaurantViewModel: RestaurantViewModel = viewModel()
     NavHost(navController = navController, startDestination = "RestaurantList") {

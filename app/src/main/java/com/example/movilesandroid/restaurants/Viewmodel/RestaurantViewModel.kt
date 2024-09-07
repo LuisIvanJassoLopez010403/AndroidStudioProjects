@@ -1,13 +1,10 @@
-package com.example.movilesandroid.Screens.Restaurants.Viewmodel
+package com.example.movilesandroid.restaurants.Viewmodel
 
-import android.content.Context
-import android.content.Intent
-import android.net.Uri
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.movilesandroid.Screens.Restaurants.Network.RetrofitInstance
-import com.example.movilesandroid.Screens.Restaurants.Models.Restaurant
+import com.example.movilesandroid.restaurants.Network.RetrofitInstance
+import com.example.movilesandroid.restaurants.Models.Restaurant
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 

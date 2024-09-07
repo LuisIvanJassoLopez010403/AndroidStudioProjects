@@ -1,12 +1,10 @@
-package com.example.movilesandroid.Screens.Gyms.Viewmodel
+package com.example.movilesandroid.gyms.Viewmodel
 
 import android.util.Log
-import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.movilesandroid.Screens.Gyms.Models.Gym
-import com.example.movilesandroid.Screens.Gyms.Network.RetrofitInstance
+import com.example.movilesandroid.gyms.Models.Gym
+import com.example.movilesandroid.gyms.Network.RetrofitInstance
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 

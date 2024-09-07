@@ -1,6 +1,6 @@
-package com.example.movilesandroid.Screens.Gyms.Network
+package com.example.movilesandroid.gyms.Network
 
-import com.example.movilesandroid.Screens.Gyms.Models.Gym
+import com.example.movilesandroid.gyms.Models.Gym
 import retrofit2.http.GET
 
 interface GymService {

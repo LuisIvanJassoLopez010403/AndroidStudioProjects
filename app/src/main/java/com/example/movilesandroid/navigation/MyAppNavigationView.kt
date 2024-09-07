@@ -6,7 +6,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.movilesandroid.bmi.BMIView
 import com.example.movilesandroid.bmi.BMIViewModel
-import com.example.movilesandroid.buttonList.ButtonListView
 import com.example.movilesandroid.rockPaperScissor.RockPaperScissorScreen
 import com.example.movilesandroid.rockPaperScissor.RockPaperScissorViewModel
 import com.example.movilesandroid.score.ScoreView
@@ -18,8 +17,10 @@ import com.example.movilesandroid.water.WaterViewModel
 import com.example.movilesandroid.firstPartial.FirstPartialView
 import com.example.movilesandroid.firstPartialExam.FirstPartialExamView
 import com.example.movilesandroid.firstPartialExam.FirstPartialExamViewModel
-import com.example.movilesandroid.login.LoginView
+import com.example.movilesandroid.gyms.Viewmodel.GymViewModel
+import com.example.movilesandroid.gyms.Views.GymList
 import com.example.movilesandroid.lottie.LottieAnimationView
+import com.example.movilesandroid.restaurants.Views.Nav
 import com.example.movilesandroid.secondPartial.SecondPartialView
 import com.example.movilesandroid.studentList.StudentListView
 import com.example.movilesandroid.thirdPartial.ThirdPartialView
@@ -58,11 +59,11 @@ fun MyAppNavigationView() {
         composable(Routes.studentListView) {
             StudentListView(navController)
         }
-        composable(Routes.buttonListView) {
-            ButtonListView(navController)
+        composable(Routes.gymListView) {
+            GymList(viewModel = GymViewModel(), navController)
         }
-        composable(Routes.loginView) {
-            LoginView(navController)
+        composable(Routes.restaurantListView) {
+            Nav(navController)
         }
         composable(Routes.timeFighterView) {
             TimeFighterView(viewModel = TimeFighterViewModel(), navController)

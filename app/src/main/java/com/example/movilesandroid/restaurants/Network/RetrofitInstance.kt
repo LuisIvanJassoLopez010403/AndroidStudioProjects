@@ -1,4 +1,4 @@
-package com.example.movilesandroid.Screens.Restaurants.Network
+package com.example.movilesandroid.restaurants.Network
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
