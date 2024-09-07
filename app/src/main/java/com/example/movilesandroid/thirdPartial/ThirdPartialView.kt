@@ -13,10 +13,12 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.example.movilesandroid.R
 import com.example.movilesandroid.navigation.BottomNavBarView
 import com.example.movilesandroid.navigation.Routes
 
@@ -26,7 +28,7 @@ fun ThirdPartialView(navController: NavController) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Third Partial", color = Color.White) },
+                title = { Text(stringResource(id = R.string.third_partial_title), color = Color.White) },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
                     containerColor = Color.Red,
                 )
@@ -38,12 +40,6 @@ fun ThirdPartialView(navController: NavController) {
                     .fillMaxSize()
                     .padding(innerPadding)
             ) {
-                Text(
-                    text = "Third Partial View",
-                    fontSize = 50.sp,
-                    fontWeight = FontWeight.Bold,
-                    textAlign = TextAlign.Center
-                )
                 Button(onClick = {
                     navController.navigate(Routes.sumView)
                 }) {

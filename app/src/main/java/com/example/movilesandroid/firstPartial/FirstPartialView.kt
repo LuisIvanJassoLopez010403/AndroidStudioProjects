@@ -40,12 +40,6 @@ fun FirstPartialView(navController: NavController) {
                     .fillMaxSize()
                     .padding(innerPadding)
             ) {
-                Text(
-                    (stringResource(id = R.string.first_partial_screen_title)),
-                    fontSize = 50.sp,
-                    fontWeight = FontWeight.Bold,
-                    textAlign = TextAlign.Center
-                )
                 Button(onClick = {
                     navController.navigate(Routes.sumView)
                 }) {

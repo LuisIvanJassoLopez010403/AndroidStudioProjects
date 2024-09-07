@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">movilesAndroid</string>
     <string name="first_partial_title">First Partial</string>
-    <string name="first_partial_screen_title">First Partial</string>
+    <string name="second_partial_title">Second Partial</string>
+    <string name="third_partial_title">Third Partial</string>
     <string name="sum_button">Go to Sum View</string>
     <string name="rockPaperScissor_button">Go to RockPaperScissor View</string>
     <string name="score_button">Go to Score View</string>
