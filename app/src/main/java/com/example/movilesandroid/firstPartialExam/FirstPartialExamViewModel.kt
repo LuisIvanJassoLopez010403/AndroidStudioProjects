@@ -5,8 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 data class FirstPartialExamModel(
-    val totalProduction: Int,
-    val amount : Int
+    val totalProduction: Int
 )
 
 class FirstPartialExamViewModel : ViewModel() {
@@ -16,18 +15,19 @@ class FirstPartialExamViewModel : ViewModel() {
 
     fun getPercentage(): LiveData<Double> = percentage
     fun getCurrentProduction(): LiveData<Int> = currentProduction
-    fun getCurrentProductionUnits(): LiveData<Int> = currentProductionUnits
-
     fun sumProduction(amount: Int) {
         val incrementCurrentProduction = (currentProduction.value ?: 0) + amount
         currentProduction.postValue(incrementCurrentProduction)
     }
-    fun calculatePercentage(totalProduction: Int) {
-        percentage.postValue(((currentProduction.value ?: 0) * 100) / totalProduction.toDouble())
+    fun calculatePercentage(model : FirstPartialExamModel) {
+        percentage.postValue(((currentProduction.value ?: 0) * 100) / model.totalProduction.toDouble())
     }
     fun calculateCurrentProductionUnits(): String {
         val units = (currentProduction.value ?: 0) * 80
         currentProductionUnits.postValue(units)
         return units.toString()
+    }
+    fun calculateTotalProductionUnits(model: FirstPartialExamModel): Int {
+        return model.totalProduction * 80
     }
 }

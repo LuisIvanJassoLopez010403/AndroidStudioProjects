@@ -14,6 +14,13 @@
     <string name="timeFighter_button">Ve a Vista de PeleaDeTiempo</string>
     <string name="lottieAnimation_button">Ve a Vista de Animación de Lottie</string>
     <string name="videoBackground_button">Ve a Vista de Fondo de Video</string>
+    <string name="firstPartialTest_button">Ve a Vista de Examen Primer Parcial</string>
+    <string name="totalProduction_string">Producción Total</string>
+    <string name="currentProduction_string">Producción Actual</string>
+    <string name="percentage_string">Porcentaje</string>
+    <string name="calculate_button">Calcular</string>
+    <string name="currentProduction_message">Número actual de manzanas: %1$s</string>
+    <string name="totalProduction_message">Número total de manzanas: %1$s</string>
     <string name="password_string">Contraseña</string>
     <string name="login_string">Iniciar sesión</string>
 </resources>

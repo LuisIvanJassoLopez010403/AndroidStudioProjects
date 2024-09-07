@@ -138,7 +138,7 @@ fun FirstPartialView(navController: NavController) {
                     navController.navigate(Routes.firstPartialExamView)
                 }) {
                     Text(
-                        (stringResource(id = R.string.videoBackground_button)),
+                        (stringResource(id = R.string.firstPartialTest_button)),
                         modifier = Modifier
                             .fillMaxWidth())
                 }
