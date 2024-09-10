@@ -17,6 +17,7 @@
     <string name="gymList_button">Go to GymList View</string>
     <string name="restaurantList_button">Go to RestaurantList View</string>
     <string name="firstPartialTest_button">Go to First Partial Test View</string>
+    <string name="randomCard_button">Go to Random Card View</string>
     <string name="totalProduction_string">Total Production</string>
     <string name="currentProduction_string">Current Production</string>
     <string name="percentage_string">Percentage</string>

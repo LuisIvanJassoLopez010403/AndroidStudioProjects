@@ -20,6 +20,8 @@ import com.example.movilesandroid.firstPartialExam.FirstPartialExamViewModel
 import com.example.movilesandroid.gyms.Viewmodel.GymViewModel
 import com.example.movilesandroid.gyms.Views.GymList
 import com.example.movilesandroid.lottie.LottieAnimationView
+import com.example.movilesandroid.randomCard.RandomCardView
+import com.example.movilesandroid.randomCard.RandomCardViewModel
 import com.example.movilesandroid.restaurants.Views.Nav
 import com.example.movilesandroid.secondPartial.SecondPartialView
 import com.example.movilesandroid.studentList.StudentListView
@@ -76,6 +78,9 @@ fun MyAppNavigationView() {
         }
         composable(Routes.firstPartialExamView) {
             FirstPartialExamView(viewModel = FirstPartialExamViewModel(), navController)
+        }
+        composable(Routes.randomCardView) {
+            RandomCardView(viewModel = RandomCardViewModel(),navController)
         }
     })
 }

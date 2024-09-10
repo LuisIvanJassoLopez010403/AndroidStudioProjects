@@ -17,4 +17,5 @@ object Routes {
     var lottieAnimationView = "LottieAnimationView"
     var videoBackgroundView = "VideoBackgroundView"
     var firstPartialExamView = "FirstPartialExamView"
+    var randomCardView = "RandomCardView"
 }

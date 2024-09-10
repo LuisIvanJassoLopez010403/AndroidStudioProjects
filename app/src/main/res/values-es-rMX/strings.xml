@@ -18,6 +18,7 @@
     <string name="gymList_button">Ve a Vista de Gimnasios</string>
     <string name="restaurantList_button">Ve a Vista de Restaurantes</string>
     <string name="firstPartialTest_button">Ve a Vista de Examen Primer Parcial</string>
+    <string name="randomCard_button">Ve a Vista de Cartas Aleatorias</string>
     <string name="totalProduction_string">Producción Total</string>
     <string name="currentProduction_string">Producción Actual</string>
     <string name="percentage_string">Porcentaje</string>

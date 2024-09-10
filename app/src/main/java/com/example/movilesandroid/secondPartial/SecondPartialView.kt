@@ -41,48 +41,10 @@ fun SecondPartialView(navController: NavController) {
                     .padding(innerPadding)
             ) {
                 Button(onClick = {
-                    navController.navigate(Routes.sumView)
+                    navController.navigate(Routes.randomCardView)
                 }) {
                     Text(
-                        text = "Go to Sum View",
-                        modifier = Modifier
-                            .fillMaxWidth())
-                }
-                Button(onClick = {
-                    navController.navigate(Routes.rockPaperScissorView)
-                }) {
-                    Text(
-                        text = "Go to RockPaperScissor View",
-                        modifier = Modifier
-                            .fillMaxWidth())
-                }
-                Button(onClick = {
-                    navController.navigate(Routes.scoreView)
-                }) {
-                    Text(
-                        text = "Go to Score View",
-                        modifier = Modifier
-                            .fillMaxWidth())
-                }
-                Button(onClick = {
-                    navController.navigate(Routes.waterView)
-                }) {
-                    Text(
-                        text = "Go to Water View",
-                        modifier = Modifier
-                            .fillMaxWidth())
-                }
-                Button(onClick = {
-                    navController.navigate(Routes.bmiView)
-                }) {
-                    Text(text = "Go to BMI View",
-                        modifier = Modifier
-                            .fillMaxWidth())
-                }
-                Button(onClick = {
-                    navController.navigate(Routes.studentListView)
-                }) {
-                    Text(text = "Go to Student List View",
+                        (stringResource(id = R.string.randomCard_button)),
                         modifier = Modifier
                             .fillMaxWidth())
                 }
