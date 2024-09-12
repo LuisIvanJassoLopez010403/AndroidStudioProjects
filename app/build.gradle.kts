@@ -77,4 +77,6 @@ dependencies {
     implementation("androidx.media:media:1.6.0")
     implementation("com.airbnb.android:lottie-compose:4.0.0")
     implementation("com.google.android.exoplayer:exoplayer:2.18.7")
+    implementation("androidx.biometric:biometric:1.1.0")
+    implementation("androidx.appcompat:appcompat")
 }
