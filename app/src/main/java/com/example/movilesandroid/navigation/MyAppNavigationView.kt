@@ -1,6 +1,8 @@
 package com.example.movilesandroid.navigation
 
+import android.app.Application
 import androidx.compose.runtime.Composable
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -24,6 +26,8 @@ import com.example.movilesandroid.randomCard.RandomCardView
 import com.example.movilesandroid.randomCard.RandomCardViewModel
 import com.example.movilesandroid.restaurants.Views.Nav
 import com.example.movilesandroid.secondPartial.SecondPartialView
+import com.example.movilesandroid.sharedpreferences.SharedPreferencesView
+import com.example.movilesandroid.sharedpreferences.SharedPreferencesViewModel
 import com.example.movilesandroid.studentList.StudentListView
 import com.example.movilesandroid.thirdPartial.ThirdPartialView
 import com.example.movilesandroid.timeFighter.TimeFighterView
@@ -35,7 +39,7 @@ fun MyAppNavigationView() {
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = Routes.firstPartialView, builder =  {
         composable(Routes.firstPartialView) {
-            FirstPartialView(navController)
+            FirstPartialView(firstViewModel = viewModel(), navController)
         }
         composable(Routes.secondPartialView) {
             SecondPartialView(navController)
@@ -81,6 +85,9 @@ fun MyAppNavigationView() {
         }
         composable(Routes.randomCardView) {
             RandomCardView(viewModel = RandomCardViewModel(),navController)
+        }
+        composable(Routes.sharedpreferencesView) {
+            SharedPreferencesView(mainViewModel = viewModel(), navController)
         }
     })
 }

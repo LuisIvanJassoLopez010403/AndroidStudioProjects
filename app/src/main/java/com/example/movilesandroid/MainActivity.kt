@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.content.ContextCompat
 import com.example.movilesandroid.authentication.AuthView
+import com.example.movilesandroid.navigation.MyAppNavigationView
 import com.example.movilesandroid.ui.theme.MovilesAndroidTheme
 
 class MainActivity : AppCompatActivity() {
@@ -83,8 +84,8 @@ class MainActivity : AppCompatActivity() {
         setContent {
             MovilesAndroidTheme {
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-                    AuthView(isAuthenticated, onAuthenticated = ::handleAuthenticationResult)
-                //MyAppNavigationView()
+                    //AuthView(isAuthenticated, onAuthenticated = ::handleAuthenticationResult)
+                MyAppNavigationView()
                 }
             }
         }

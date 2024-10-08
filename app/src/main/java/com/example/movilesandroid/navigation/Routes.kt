@@ -18,4 +18,5 @@ object Routes {
     var videoBackgroundView = "VideoBackgroundView"
     var firstPartialExamView = "FirstPartialExamView"
     var randomCardView = "RandomCardView"
+    var sharedpreferencesView = "SharedPreferencesView"
 }

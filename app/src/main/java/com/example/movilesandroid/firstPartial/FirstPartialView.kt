@@ -11,12 +11,12 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.movilesandroid.R
 import com.example.movilesandroid.navigation.BottomNavBarView
@@ -24,11 +24,16 @@ import com.example.movilesandroid.navigation.Routes
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun FirstPartialView(navController: NavController) {
+fun FirstPartialView(firstViewModel: FirstPartialViewModel = viewModel(), navController: NavController) {
+    val name = firstViewModel.name.collectAsState()
+
+    LaunchedEffect(Unit) {
+        firstViewModel.updateName()
+    }
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(stringResource(id = R.string.first_partial_title), color = Color.White) },
+                title = { Text(stringResource(id = R.string.first_partial_title) + " " + name.value, color = Color.White) },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
                     containerColor = Color.Red,
                 )

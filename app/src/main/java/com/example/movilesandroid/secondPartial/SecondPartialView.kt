@@ -48,6 +48,14 @@ fun SecondPartialView(navController: NavController) {
                         modifier = Modifier
                             .fillMaxWidth())
                 }
+                Button(onClick = {
+                    navController.navigate(Routes.sharedpreferencesView)
+                }) {
+                    Text(
+                        (stringResource(id = R.string.randomCard_button)),
+                        modifier = Modifier
+                            .fillMaxWidth())
+                }
             }
         },
         bottomBar = {
